@@ -13,7 +13,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
-public class MainRegistry
+public class DiamondCraft
 {
 	@SidedProxy(clientSide = Reference.PROXY_CLIENT, serverSide = Reference.PROXY_SERVER)
 	public static CommonProxy proxy;
@@ -22,7 +22,7 @@ public class MainRegistry
 	public static ModMetadata meta;
 
 	@Instance(Reference.MODID)
-	public static MainRegistry modInstance;
+	public static DiamondCraft modInstance;
 
 	@EventHandler
 	public void preInit(final FMLPreInitializationEvent PreEvent)

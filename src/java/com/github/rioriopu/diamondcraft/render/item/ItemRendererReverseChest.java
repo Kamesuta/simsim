@@ -9,24 +9,24 @@ import net.minecraftforge.client.IItemRenderer;
 
 public class ItemRendererReverseChest implements IItemRenderer {
 
-	private ModelChest chestModel;
+	protected ModelChest chestModel;
 
 	@Override
-	public boolean handleRenderType(ItemStack item, ItemRenderType type) {
+	public boolean handleRenderType(final ItemStack item, final ItemRenderType type) {
 
 		return true;
 	}
 
 	@Override
-	public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
+	public void renderItem(final ItemRenderType type, final ItemStack item, final Object... data) {
 		TileEntityRendererDispatcher.instance.renderTileEntityAt(new TileEntityReverseChest(), 0.0D, 0.0D, 0.0D, 0.0F);
 
 
 	}
 
 	@Override
-	public boolean shouldUseRenderHelper(ItemRenderType type, ItemStack item,
-			ItemRendererHelper helper) {
+	public boolean shouldUseRenderHelper(final ItemRenderType type, final ItemStack item,
+			final ItemRendererHelper helper) {
 
 		return true;
 	}

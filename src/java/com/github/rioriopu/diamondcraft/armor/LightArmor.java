@@ -10,14 +10,14 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
 public class LightArmor extends ItemArmor{
-	private String [] armourTypes = new String [] {"LightDiamondHelmet", "LightDiamondChestPlate", "LightDiamondLeggings", "LightDiamondBoots"};
+	// private String [] armourTypes = new String [] {"LightDiamondHelmet", "LightDiamondChestPlate", "LightDiamondLeggings", "LightDiamondBoots"};
 
-	public LightArmor(ArmorMaterial armorMaterial, int renderIndex, int armourType){
+	public LightArmor(final ArmorMaterial armorMaterial, final int renderIndex, final int armourType){
 		super(armorMaterial, renderIndex, armourType);
 	}
 
 	@Override
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String layer){
+	public String getArmorTexture(final ItemStack stack, final Entity entity, final int slot, final String layer){
 		if(stack.getItem().equals(DiamondCraftArmor.LightDiamondHelmet)|| stack.getItem().equals(DiamondCraftArmor.LightDiamondChestPlate)|| stack.getItem().equals(DiamondCraftArmor.LightDiamondBoots)){
 			return "diamondcraft:textures/models/armor/lightdiamond_layer_1.png";
 		}
@@ -30,7 +30,7 @@ public class LightArmor extends ItemArmor{
 	}
 
 	@Override
-	public void registerIcons(IIconRegister reg){
+	public void registerIcons(final IIconRegister reg){
 		if(this == DiamondCraftArmor.LightDiamondHelmet)
 			this.itemIcon = reg.registerIcon("diamondcraft:lightdiamond_helmet");
 		if(this == DiamondCraftArmor.LightDiamondChestPlate)
@@ -43,12 +43,12 @@ public class LightArmor extends ItemArmor{
 
 
 	@Override
-	public void onArmorTick(World world, EntityPlayer player, ItemStack stack){
+	public void onArmorTick(final World world, final EntityPlayer player, final ItemStack stack){
 		if(player.getCurrentArmor(0) != null && player.getCurrentArmor(1) != null && player.getCurrentArmor(2) != null && player.getCurrentArmor(3) != null){
-			ItemStack boots = player.getCurrentArmor(0);
-			ItemStack legs = player.getCurrentArmor(1);
-			ItemStack chest = player.getCurrentArmor(2);
-			ItemStack helmet = player.getCurrentArmor(3);
+			final ItemStack boots = player.getCurrentArmor(0);
+			final ItemStack legs = player.getCurrentArmor(1);
+			final ItemStack chest = player.getCurrentArmor(2);
+			final ItemStack helmet = player.getCurrentArmor(3);
 
 			if(boots.getItem() == DiamondCraftArmor.LightDiamondBoots && legs.getItem() == DiamondCraftArmor.LightDiamondLeggings && chest.getItem() == DiamondCraftArmor.LightDiamondChestPlate && helmet.getItem() == DiamondCraftArmor.LightDiamondHelmet){
 				player.addPotionEffect(new PotionEffect(Potion.resistance.getId(), 100, 1));

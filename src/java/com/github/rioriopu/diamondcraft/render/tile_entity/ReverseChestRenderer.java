@@ -26,8 +26,7 @@ public class ReverseChestRenderer extends TileEntitySpecialRenderer
 	private static final ResourceLocation field_147504_g = new ResourceLocation(Reference.MODID + ":textures/blocks/PupletChest");
 	private final ModelChest field_147510_h = new ModelChest();
 	private final ModelChest field_147511_i = new ModelLargeChest();
-	private boolean field_147509_j;
-	private static final String __OBFID = "CL_00000965";
+	protected boolean field_147509_j;
 
 	public ReverseChestRenderer()
 	{

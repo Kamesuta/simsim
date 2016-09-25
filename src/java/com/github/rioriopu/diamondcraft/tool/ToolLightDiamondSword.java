@@ -21,31 +21,32 @@ public class ToolLightDiamondSword extends ItemSword{
 
 	protected final float weaponDamage;
 
-	public ToolLightDiamondSword(Item.ToolMaterial mat, float damage){
+	public ToolLightDiamondSword(final Item.ToolMaterial mat, final float damage){
 		super(mat);
 		this.weaponDamage = damage;
 
 	}
 
+	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IIconRegister reg){
+	public void registerIcons(final IIconRegister reg){
 		this.itemIcon = reg.registerIcon("diamondcraft:lightdiamond_sword");
 
 	}
 
 	@Override
-	public Multimap getItemAttributeModifiers(){
-		Multimap multimap = HashMultimap.create();
-		multimap.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Weapon modifier",  (double) this.weaponDamage, 0));
+	public Multimap<String, AttributeModifier> getItemAttributeModifiers(){
+		final Multimap<String, AttributeModifier> multimap = HashMultimap.create();
+		multimap.put(SharedMonsterAttributes.attackDamage.getAttributeUnlocalizedName(), new AttributeModifier(field_111210_e, "Weapon modifier",  this.weaponDamage, 0));
 		return multimap;
 	}
 
 	@Override
-	public void onUpdate(ItemStack stack, World world, Entity entity, int par4, boolean par5){
+	public void onUpdate(final ItemStack stack, final World world, final Entity entity, final int par4, final boolean par5){
 		super.onUpdate(stack, world, entity, par4, par5);
 		{
-			EntityPlayer player = (EntityPlayer) entity;
-			ItemStack equipped = player.getCurrentEquippedItem();
+			final EntityPlayer player = (EntityPlayer) entity;
+			final ItemStack equipped = player.getCurrentEquippedItem();
 			if(equipped == stack){
 				player.addPotionEffect(new PotionEffect(Potion.damageBoost.getId(), 100, 2));
 			}

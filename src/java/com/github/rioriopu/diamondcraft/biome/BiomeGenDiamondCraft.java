@@ -1,5 +1,7 @@
 package com.github.rioriopu.diamondcraft.biome;
 
+import java.util.List;
+
 import com.github.rioriopu.diamondcraft.block.DiamondCraftBlock;
 
 import net.minecraft.entity.monster.EntitySlime;
@@ -8,10 +10,12 @@ import net.minecraft.world.biome.BiomeGenBase;
 
 public class BiomeGenDiamondCraft extends BiomeGenBase{
 
-	public BiomeGenDiamondCraft(int id){
+	public BiomeGenDiamondCraft(final int id){
 		super(id);
 
-		this.spawnableCreatureList.add(new SpawnListEntry(EntitySlime.class, 5, 2, 10));
+		@SuppressWarnings("unchecked")
+		final List<Object> creatureList = this.spawnableCreatureList;
+		creatureList.add(new SpawnListEntry(EntitySlime.class, 5, 2, 10));
 
 		this.theBiomeDecorator.treesPerChunk = 5;
 		this.theBiomeDecorator.grassPerChunk = 2;

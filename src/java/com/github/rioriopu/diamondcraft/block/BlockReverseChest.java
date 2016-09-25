@@ -226,7 +226,7 @@ public class BlockReverseChest extends BlockChest{
 	private static boolean func_149953_o(final World p_149953_0_, final int p_149953_1_, final int p_149953_2_, final int p_149953_3_)
 	{
 
-		final Iterator iterator = p_149953_0_.getEntitiesWithinAABB(EntityOcelot.class, AxisAlignedBB.getBoundingBox(p_149953_1_, p_149953_2_ + 1, p_149953_3_, p_149953_1_ + 1, p_149953_2_ + 2, p_149953_3_ + 1)).iterator();
+		final Iterator<?> iterator = p_149953_0_.getEntitiesWithinAABB(EntityOcelot.class, AxisAlignedBB.getBoundingBox(p_149953_1_, p_149953_2_ + 1, p_149953_3_, p_149953_1_ + 1, p_149953_2_ + 2, p_149953_3_ + 1)).iterator();
 		EntityOcelot entityocelot;
 
 		do
