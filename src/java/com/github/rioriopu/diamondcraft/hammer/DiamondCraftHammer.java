@@ -1,5 +1,6 @@
-package com.github.rioriopu.diamondcraft;
+package com.github.rioriopu.diamondcraft.hammer;
 
+import com.github.rioriopu.diamondcraft.DiamondCraftRecipe;
 import com.github.rioriopu.diamondcraft.item.DiamondCraftItem;
 import com.github.rioriopu.diamondcraft.item.ItemHammerDarkCrystal;
 import com.github.rioriopu.diamondcraft.item.ItemHammerDiamond;

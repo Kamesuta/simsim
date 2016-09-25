@@ -1,6 +1,6 @@
 package com.github.rioriopu.diamondcraft.item;
 
-import com.github.rioriopu.diamondcraft.DiamondCraftHammer;
+import com.github.rioriopu.diamondcraft.hammer.DiamondCraftHammer;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;

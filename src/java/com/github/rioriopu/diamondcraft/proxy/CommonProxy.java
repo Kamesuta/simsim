@@ -1,10 +1,10 @@
 package com.github.rioriopu.diamondcraft.proxy;
 
-import com.github.rioriopu.diamondcraft.DiamondCraftHammer;
 import com.github.rioriopu.diamondcraft.DiamondCraftRecipe;
 import com.github.rioriopu.diamondcraft.armor.DiamondCraftArmor;
 import com.github.rioriopu.diamondcraft.block.DiamondCraftBlock;
 import com.github.rioriopu.diamondcraft.food.DiamondCraftFood;
+import com.github.rioriopu.diamondcraft.hammer.DiamondCraftHammer;
 import com.github.rioriopu.diamondcraft.item.DiamondCraftItem;
 import com.github.rioriopu.diamondcraft.tool.DiamondCraftTool;
 
