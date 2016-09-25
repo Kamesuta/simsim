@@ -1,6 +1,6 @@
 package com.github.rioriopu.diamondcraft.item;
 
-import com.github.rioriopu.diamondcraft.DiamondCraftHammerCore;
+import com.github.rioriopu.diamondcraft.DiamondCraftHammer;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
@@ -37,7 +37,7 @@ public class ItemHammerDiamond extends Item
 	public void onCrafting(ItemCraftedEvent event)
 	{
 		//IDが無くなったので、アイテムインスタンスで比較。
-		repair = DiamondCraftHammerCore.DiamondHammer == event.crafting.getItem();
+		repair = DiamondCraftHammer.DiamondHammer == event.crafting.getItem();
 	}
     //クラフト後のアイテムを、ダメージを与えて返す
     @Override
