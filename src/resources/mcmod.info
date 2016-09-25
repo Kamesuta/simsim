@@ -1,13 +1,13 @@
 [
 {
-  "modid": "DiamondCraft",
-  "name": "DiamondCraft",
+  "modid": "${modid}",
+  "name": "${modname}",
   "description": "しむらに作ったmod。",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["上田龍桜"],
-  "credits": "The　End ",
+  "authorList": ["simsim"],
+  "credits": "The End ",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
